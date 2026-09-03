@@ -1,0 +1,47 @@
+appId: com.badedits.bfx-packager
+productName: BFX Packager
+copyright: Copyright © BadEdits
+
+directories:
+  output: release
+  buildResources: build
+
+icon: icon.png
+
+files:
+  - dist/**/*
+  - electron/**/*
+  - package.json
+  - node_modules/**/*
+
+asar: true
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: ${productName}-${version}-win-${arch}.${ext}
+  signAndEditExecutable: false
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  shortcutName: BFX Packager
+
+mac:
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+  artifactName: ${productName}-${version}-mac-${arch}.${ext}
+  category: public.app-category.utilities
+  identity: null
+
+dmg:
+  title: BFX Packager ${version}
+
+linux:
+  target: []
