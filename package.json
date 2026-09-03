@@ -1,6 +1,6 @@
 {
   "name": "bfx-packager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "BFX Packager — clean, encrypt, and package folders as .bfx",
   "author": "BadEdits",
   "private": true,
