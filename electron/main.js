@@ -1,6 +1,15 @@
 const { app, BrowserWindow, dialog, ipcMain } = require("electron");
 const fs = require("node:fs/promises");
+const fsSync = require("node:fs");
 const path = require("node:path");
+
+app.setAppUserModelId("com.badedits.bfx-packager");
+
+function resolveAppIcon() {
+  const packaged = path.join(process.resourcesPath, "icon.png");
+  if (app.isPackaged && fsSync.existsSync(packaged)) return packaged;
+  return path.join(__dirname, "..", "build", "icon.png");
+}
 const { cleanFolder } = require("./lib/clean");
 const { copyFolderTo } = require("./lib/copy");
 const { encryptFolder } = require("./lib/encrypt");
@@ -21,6 +30,7 @@ function createWindow() {
     minWidth: 780,
     minHeight: 600,
     title: "BFX Packager",
+    icon: resolveAppIcon(),
     backgroundColor: "#0b101a",
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
