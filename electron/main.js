@@ -21,7 +21,7 @@ function createWindow() {
     minWidth: 780,
     minHeight: 600,
     title: "BFX Packager",
-    backgroundColor: "#1a1814",
+    backgroundColor: "#0b101a",
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       contextIsolation: true,

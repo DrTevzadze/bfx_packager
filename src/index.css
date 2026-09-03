@@ -4,24 +4,24 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #141210;
-  --foreground: #f3ebdc;
-  --card: #221f1a;
-  --card-foreground: #f3ebdc;
-  --popover: #221f1a;
-  --popover-foreground: #f3ebdc;
-  --primary: #e85d04;
-  --primary-foreground: #1a1008;
-  --secondary: #2a261f;
-  --secondary-foreground: #f3ebdc;
-  --muted: #2a261f;
-  --muted-foreground: #a89a82;
-  --accent: #2a261f;
-  --accent-foreground: #f3ebdc;
+  --background: #0b101a;
+  --foreground: #eef2ff;
+  --card: #131a28;
+  --card-foreground: #eef2ff;
+  --popover: #131a28;
+  --popover-foreground: #eef2ff;
+  --primary: #1a57f9;
+  --primary-foreground: #f8faff;
+  --secondary: #1a2438;
+  --secondary-foreground: #eef2ff;
+  --muted: #1a2438;
+  --muted-foreground: #8b97b0;
+  --accent: #1a2438;
+  --accent-foreground: #eef2ff;
   --destructive: #e07060;
-  --border: rgb(245 230 200 / 0.14);
-  --input: rgb(245 230 200 / 0.16);
-  --ring: #e85d04;
+  --border: rgb(180 200 255 / 0.14);
+  --input: rgb(180 200 255 / 0.16);
+  --ring: #1a57f9;
   --radius: 0.4rem;
 }
 
@@ -97,15 +97,15 @@ body {
 
 .wash {
   background:
-    radial-gradient(ellipse 70% 50% at 100% 0%, rgb(232 93 4 / 0.09), transparent 55%),
-    linear-gradient(165deg, #1c1914 0%, #141210 45%, #18140f 100%);
+    radial-gradient(ellipse 70% 50% at 100% 0%, rgb(26 87 249 / 0.14), transparent 55%),
+    linear-gradient(165deg, #10172a 0%, #0b101a 45%, #0e1422 100%);
 }
 
 .brand-mark::after {
   content: "";
   position: absolute;
   inset: 9px 7px;
-  border: 2px solid rgb(20 18 16 / 0.55);
+  border: 2px solid rgb(8 16 40 / 0.55);
   border-radius: 2px;
   border-left-width: 4px;
 }
